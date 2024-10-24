@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cynthia</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="loco.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cynthiaugwu.com/images/cynthia.png">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-family: 'General Sans';
+            color: #fff;
+
+            
+
+        }
+        #main{
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+        .page1{
+            height: 100vh;
+            width: 100vw;
+            
+          
+        }
+        .nav{
+            height: 100px;
+            width: 100vw;
+            position: fixed;
+            background-color: #000000;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.4vw 3vw 1vw 2.2vw;
+        }
+        .nav h4{
+            color: #fff;
+        }
+        .content{
+            height: calc(100vh - 100px);
+            width: 100vw;
+           
+           
+        }
+        .designer h1{
+            font-size: 10.5vw;
+            margin-top: -2.3vw;
+            margin-right: 3vw;
+            color: #A3A3A3;
+            font-weight: 750;
+            word-spacing: 3vw;
+          
+        }
+        .content .product{
+            font-size: 10.5vw;
+            padding: 4vw 3vw 0vw 3vw;
+            color: #A3A3A3;
+            font-weight: 750;
+            word-spacing: 3vw;
+        }
+        .designer{
+            width: 70vw;
+            
+            display: flex;
+            margin-top: -3vw;
+            flex-direction: column;
+      
+            align-items: end;
+        }
+        .designer h4{
+            margin-right: 3vw;
+            color: #fff;
+            margin-top: -1.5vw;
+        }
+        .smallheadings{
+            width: 100vw;
+            height: fit-content;
+            margin-top: 7vw;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            padding-right: 3vw;
+        
+        }
+        .smallheadings h3{
+           font-size: 1vw;
+           margin-bottom: 1vw;
+        
+        }
+        .secondpart{
+            width: 100vw;
+            height: 10vh;
+          
+        }
+        .fakeheader{
+            height: 100px;
+            width: 100vw;
+        }
+        .secondpart{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0vw 3vw;
+        }
+        .footer{
+            display: flex;
+            gap: 0.4vw;
+
+        }
+        .footer h4{
+            display: flex;
+            gap: 0.4vw;
+            font-size: 0.9vw;
+
+        }
+        .icons{
+            width: fit-content;
+            height: fit-content;
+            padding-bottom: 3vw;
+            gap:0.4vw;
+        }
+
+        .icons i{
+            font-size: 1.4vw;
+            background-color: #A3A3A3;
+            border-radius: 50%;
+            color: black;
+            padding: 0.1vw;
+          
+        }
+        .thirdpart{
+            height: 140vh;
+            width: 100%;
+            position: relative;
+        
+            padding: 10vw 8vw 1vw 2.2vw;
+        }
+        
+        .titles h1{
+            color: #A3A3A3;
+            font-size: 7vw;
+            
+        }
+       .titles{
+      
+            width: 100%;
+            border-top: 0.8px solid #A3A3A3;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3.5vw 3vw;
+            padding-right: 0;
+
+    
+       }
+        .title{
+            padding: 2vw 0vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        .titles:last-child{
+            
+            border-bottom: 0.8px solid #A3A3A3;
+            
+        }
+        .titles img{
+            height: 140%;
+         
+            z-index: 50;
+            opacity: 0;
+            position: absolute;
+            /* object-fit: cover; */
+        }
+        .fourthpart{
+            height: 60vh;
+            width: 100vw;
+          
+            display: flex;
+            gap: 4vw;
+            padding-left: 20vw;
+            padding-bottom: 8vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .fourthpart img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img{
+            height: 15vw;
+            width: 15vw;
+        
+        }
+        .about{
+            width: 25vw;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: start; */
+        }
+        .about h5{
+            color: #A3A3A3;
+            padding-bottom: 0.3vw;
+        }
+        .about p{
+            line-height: 1.3vw;
+            margin-bottom: 1vw;
+          
+        }
+        .about button{
+            font-size: 1.1vw;
+            font-weight: 500;
+            background-color: #000000;
+            color: #fff;
+            border-radius: 2vw;
+            border: 1px solid white;
+            padding: 0.6vw 0.9vw;
+        }
+        .fifthpart{
+            height: 50px;
+            width: 100vw;
+            padding-left: 2.2vw;
+      
+        }
+        .fifthpart h4{
+            color: #A3A3A3;
+            font-size: 0.8vw;
+            font-weight: 400;
+            margin-bottom: 0.5vw;
+        }
+        .subscribe{
+            font-size: 0.8vw;
+            font-weight: 400;
+            display: flex;
+        }
+        .sixthpart{
+            height: 130px;
+            width: 100vw;
+        
+            padding:1vw 2.2vw;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+        }
+        .foot1{
+            display: flex;
+            gap: 2vw;
+        }
+        .foot1 h4{
+            font-size: 1.1vw;
+            font-weight: 600;
+        }
+        .foot2 a{
+            color: #fff;
+            text-decoration: none;
+            padding: 1vw;
+            font-weight: 500;
+            font-size: 0.9vw;
+        }
+
+        .dot{
+            /* transition: all cubic-bezier(0.19,1,0.22,1); */
+            display: none;
+            width: 0.8vw;
+            height: 0.8vw;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 100;
+            position: absolute;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="dot"></div>
+    <div id="main">
+        <div class="page1">
+            <div class="nav">
+                <div class="nav1"><h4>Cynthia Ugwu</h4></div>
+                <div class="nav2"><h4>MENU+</h4></div>
+            </div>
+            <div class="fakeheader">
+
+            </div>
+            <div class="content">
+                <h1 class="product">PRODUCT</h1>
+                <div class="designer">
+                    <h1>DESIGNER</h1>
+                    <h4>BASED IN TORONTO</h4>
+                </div>
+                <div class="smallheadings">
+                    <h3>AVAILABLE FOR FREELANCE</h3>
+                    <h3>WORK FROM MAY 23'</h3>
+                </div>
+            </div>
+        </div>
+        <div class="secondpart">
+            <div class="footer">
+                <h4>CURRENTLY WORKING AT YML
+                </h4>
+                <i class="ri-arrow-right-up-line"></i>
+            </div>
+            <div class="footer">
+                <h4>PROTOPIE AMBASSADOR</h4>
+                <i class="ri-arrow-right-up-line"></i>
+            </div>
+            <div class="icons">
+                <i class="ri-arrow-down-line"></i>
+                <i class="ri-arrow-down-line"></i>
+            </div>
+        </div>
+        <div class="thirdpart">
+            <div class="titles">
+                <img src="plug.png" alt="">
+                    <h1>THE PLUG</h1>
+                    <h5>2022</h5>
+            </div>
+            <div class="titles">
+                <img src="https://cynthiaugwu.com/images/cover/somos.webp" alt="">
+                    <h1>IXPERIENCE</h1>
+                    <h5>2022</h5>
+            </div>
+            <div class="titles">
+                <img src="https://cynthiaugwu.com/images/cover/lucid-motors.webp" alt="">
+                    <h1>HUDU</h1>
+                    <h5>2021</h5>
+            </div>
+        </div>
+        <div class="fourthpart">
+            <div class="img">
+                <img src="https://cynthiaugwu.com/images/cynthia.png" alt="">
+            </div>
+           
+            <div class="about">
+                <h5>(ABOUT ME)</h5>
+                <P>I'm a product designer with a passion for creating products that not only look good but also solve real problems. When I'm not sketching ideas on paper, you can find me binge-watching a Netflix series or playing video games. My design philosophy is simple: make it visually appealing, functional, and bring a smile to people's faces. I'm the designer you want on your team if you want to make people say 'I need that in my life!'.</P>
+                <button>Let's talk</button>
+            </div>
+        </div>
+        <div class="fifthpart">
+            <h4>(FORGOT TO MENTION)</h4>
+            <div class="subscribe">
+                <h3>SUBSCRIBE TO MY YOUTUBE CHANNEL</h3>
+                <i class="ri-arrow-right-up-line"></i>
+            </div>
+        </div>
+        <div class="sixthpart">
+            <div class="foot1">
+                <h4>2024&copy;</h4>
+                <h4>5:10 PM EST</h4>    
+            </div>
+            <div class="foot2">
+                <a href="">DRIBBLE</a><a href="">INSTAGRAM</a><a href="">LINKEDIN</a><a href="">TWITTER</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
